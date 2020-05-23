@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手工爬取数据-详情页</title>
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts.min.js"></script>
+    <script src="./detail.js"></script>
+</head>
+<body>
+    <!-- 数据录入区域 -->
+    <div class="alert alert-success" role="alert">数据录入区域  JSON.stringify(window.rawData.store.initDataObj);</div>
+    <div class="row">
+        <div class="col-md-10">
+            <textarea id="data" class="form-control" rows="5"></textarea>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" id="saveData">数据暂存</button>
+        </div>
+    </div>
+    <hr>
+
+    <!-- 数据展示与分析 -->
+    <div class="alert alert-warning" role="warning">数据展示与分析</div>
+    <table id="table" class="table table-striped">
+        <tr class="row">
+            <th class="col-md-1">产品主图</th>
+            <th class="col-md-2">产品名称</th>
+            <th class="col-md-1">产品ID</th>
+            <th class="col-md-1">已拼数量</th>
+            <th class="col-md-7">skus</th>
+        </tr>
+    </table>
+    <div class="row">
+        <button class="btn btn-primary" id="analyze">数据分析</button>
+    </div>
+    <hr>
+
+    <!-- 数据导出区域 -->
+    <div class="alert alert-danger" role="danger">数据导出</div>
+    <div class="row">
+        <button class="btn btn-primary" id="export">数据导出</button>
+    </div>
+    
+
+    <!-- 弹框加载评论数据 -->
+    <div class="model">
+        <div class="shade"></div>
+        <div class="con">
+            <p>哈哈哈哈哈哈哈</p>
+        </div>
+    </div>
+</body>
+</html>
