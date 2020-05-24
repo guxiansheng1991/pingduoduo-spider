@@ -36,7 +36,14 @@
         </tr>
     </table>
     <div class="row">
-        <button class="btn btn-primary" id="analyze">数据分析</button>
+        <button class="btn btn-primary" id="commentModel">评论数据录入</button>
+    </div>
+    <br>
+    <div class="row">
+        <button class="btn btn-primary" id="analyze">评论数据分析</button>
+    </div>
+    <div class="row" id="myEchartsWrapper">
+        
     </div>
     <hr>
 
@@ -48,10 +55,34 @@
     
 
     <!-- 弹框加载评论数据 -->
-    <div class="model">
+    <div class="model" id="model">
         <div class="shade"></div>
         <div class="con">
-            <p>哈哈哈哈哈哈哈</p>
+            <div class="header">
+                <span>评论数据录入  JSON.stringify(window.rawData.store.commentsMap[0]);</span>
+                <span id="closeCommentModel">关闭</span>
+            </div>
+            <div class="content">
+                <div class="data-in">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <textarea id="commentData" class="form-control" rows="5"></textarea>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary" id="saveCommentData">数据暂存</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-show">
+                    <div class="alert alert-danger" role="alert">当前产品录入数据的产品ID是: <span id="currentInputProduct"></span></div>
+                    <table id="tableComment" class="table table-striped">
+                        <tr class="row">
+                            <th class="col-md-2">产品ID</th>
+                            <th class="col-md-2">已录入数据量</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </body>
