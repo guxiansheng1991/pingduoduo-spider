@@ -310,10 +310,20 @@ $(function() {
         return arr;
     }
 
-    document.querySelector('#export').addEventListener('click', function() {
-        // 导出产品列表
+    // 导出产品列表
+    document.querySelector('#exportProduct').addEventListener('click', function() {
+        if (dataList.length <= 0) {
+            alert('暂无数据');
+            return;
+        }
         exportExcel(dataList);
-        // 导出评论列表
+    });
+    // 导出评论列表
+    document.querySelector('#exportComment').addEventListener('click', function() {
+        if (Object.keys(commentObject).length <= 0) {
+            alert('暂无数据');
+            return;
+        }
         exportExcel(commentFileData(commentObject));
     });
 });
