@@ -10,11 +10,12 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/xlsx/0.16.1/xlsx.core.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
     <script src="./detail.js"></script>
 </head>
 <body>
     <!-- 数据录入区域 -->
-    <div class="alert alert-success" role="alert">数据录入区域  JSON.stringify(window.rawData.store.initDataObj);</div>
+    <div class="alert alert-success" role="alert">数据录入区域  JSON.stringify(window.rawData.store.initDataObj); <button data-clipboard-text="JSON.stringify(window.rawData.store.initDataObj);">复制代码</button></div>
     <div class="row">
         <div class="col-md-10">
             <textarea id="data" class="form-control" rows="5"></textarea>
@@ -62,7 +63,7 @@
         <div class="shade"></div>
         <div class="con">
             <div class="header">
-                <span>评论数据录入  JSON.stringify(window.rawData.store.commentsMap[0]);</span>
+                <span>评论数据录入  JSON.stringify(window.rawData.store.commentsMap[0]); <button data-clipboard-text="JSON.stringify(window.rawData.store.commentsMap[0]);">复制代码</button></span>
                 <span id="closeCommentModel">关闭</span>
             </div>
             <div class="content">
